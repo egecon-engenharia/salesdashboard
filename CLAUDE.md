@@ -2,8 +2,8 @@
 
 Painel web de vendas imobiliárias (vendas, estoque, corretores, clientes e fluxo de caixa) montado a partir de planilhas Excel.
 
-- **Repositório:** https://github.com/filipexandrade/salesdashboard (branch `main`)
-- **Publicado em:** https://filipexandrade.github.io/salesdashboard/ (GitHub Pages, raiz da `main`)
+- **Repositório:** https://github.com/egecon-engenharia/salesdashboard (branch `main`)
+- **Publicado em:** https://egecon-engenharia.github.io/salesdashboard/ (GitHub Pages, raiz da `main`)
 - **Pasta local:** `OneDrive\Área de Trabalho\SALES DASHBOARD - CLAUDE`, que é um clone do repositório
 
 ## Arquivos
