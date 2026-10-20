@@ -50,6 +50,10 @@ Painel web de vendas imobiliárias (vendas, estoque, corretores, clientes e flux
 - Os filtros (ano, empreendimento, tipo, corretor) ficam em `S.f`. `render()` redesenha a aba ativa.
 
 ### Fluxo de caixa (aba 3)
+- Mostra só o empreendimento **Andrade Home Resort** (`FX_EMP`). Nessa aba, o filtro de empreendimento tem apenas essa opção. O filtro escolhido nas outras abas é preservado ao voltar.
+- Alerta `#fxAlert` acima do gráfico: mês em que o caixa acumulado fica negativo pela primeira vez (`CS.negYm`, calculado em `cashSeries`), o pico e quando volta ao positivo. O gráfico marca esse mês com uma linha vermelha tracejada.
+- Gráfico "Receitas, despesas e caixa" (`drawFx`): colunas sólidas lado a lado com as cores próprias `--fx-rec` (azul), `--fx-desp` (vinho), `--fx-cx` (verde) e `--fx-neg` (vermelho, caixa negativo), com rótulos de valor quando há espaço (visões Trimestral e Anual). As linhas acumuladas seguem o padrão do comparativo mensal: curva, área preenchida até o zero e pontos.
+- Os indicadores ficam todos em uma linha (cartões compactos) a partir de 1300px de largura; abaixo disso, quebram em várias linhas.
 - Os planos fixos ficam em `PLANOS`, com percentuais sobre o valor da venda: apartamento À vista, 12x, 36x e 60x; loja À vista e 36x. Vendas com plano "Específico" usam as parcelas da aba **Fluxos específicos**.
 - As premissas (início dos recebimentos, despesas de obra, datas de entrega) são editáveis na tela e salvas no `localStorage` (`painel-config`) e no banco compartilhado.
 
