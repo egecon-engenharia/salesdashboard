@@ -51,8 +51,10 @@ Painel web de vendas imobiliárias (vendas, estoque, corretores, clientes e flux
 
 ### Fluxo de caixa (aba 3)
 - Mostra só o empreendimento **Andrade Home Resort** (`FX_EMP`). Nessa aba, o filtro de empreendimento tem apenas essa opção. O filtro escolhido nas outras abas é preservado ao voltar.
-- Alerta `#fxAlert` acima do gráfico: mês em que o caixa acumulado fica negativo pela primeira vez (`CS.negYm`, calculado em `cashSeries`), o pico e quando volta ao positivo. O gráfico marca esse mês com uma linha vermelha tracejada.
-- Gráfico "Receitas, despesas e caixa" (`drawFx`): colunas sólidas lado a lado com as cores próprias `--fx-rec` (azul), `--fx-desp` (vinho), `--fx-cx` (verde) e `--fx-neg` (vermelho, caixa negativo), com rótulos de valor quando há espaço (visões Trimestral e Anual). As linhas acumuladas seguem o padrão do comparativo mensal: curva, área preenchida até o zero e pontos.
+- **O caixa é sempre o acumulado** (recebível acumulado menos despesa acumulada). A diferença de um único mês aparece como "Saldo do mês".
+- Alerta `#fxAlert` acima do gráfico: **a exposição começa no primeiro mês em que o caixa acumulado fica negativo** (`CS.negYm`, calculado em `cashSeries`). O alerta também mostra desde quando as despesas do mês superam as receitas (`CS.expYm`), o pico e quando o caixa volta ao positivo. O gráfico marca o início da exposição com uma linha vermelha tracejada.
+- Gráfico "Receitas, despesas e caixa" (`drawFx`): colunas sólidas lado a lado. Recebível (`--fx-rec`, azul) e despesa (`--fx-desp`, vinho) do período ficam no eixo da esquerda. O caixa acumulado (`--fx-cx`, verde; `--fx-neg`, vermelho quando negativo) fica no eixo da direita, junto com as linhas acumuladas, e os zeros dos dois eixos são alinhados. Há rótulos de valor quando há espaço. As linhas seguem o padrão do comparativo mensal: curva, área preenchida até o zero e pontos.
+- Card e tabela "Próximos 12 meses": contam 12 meses a partir do início dos recebimentos (premissa `S.recIni`), ou a partir do mês atual se esse início já passou.
 - Os indicadores ficam todos em uma linha (cartões compactos) a partir de 1300px de largura; abaixo disso, quebram em várias linhas.
 - Os planos fixos ficam em `PLANOS`, com percentuais sobre o valor da venda: apartamento À vista, 12x, 36x e 60x; loja À vista e 36x. Vendas com plano "Específico" usam as parcelas da aba **Fluxos específicos**.
 - As premissas (início dos recebimentos, despesas de obra, datas de entrega) são editáveis na tela e salvas no `localStorage` (`painel-config`) e no banco compartilhado.
