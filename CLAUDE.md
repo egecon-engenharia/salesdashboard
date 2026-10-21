@@ -55,7 +55,7 @@ Painel web de vendas imobiliárias (vendas, estoque, corretores, clientes e flux
 - Alerta `#fxAlert` acima do gráfico: **a exposição começa no primeiro mês em que o caixa acumulado fica negativo** (`CS.negYm`, calculado em `cashSeries`). O alerta também mostra desde quando as despesas do mês superam as receitas (`CS.expYm`), o pico e quando o caixa volta ao positivo. O gráfico marca o início da exposição com uma linha vermelha tracejada.
 - Gráfico "Receitas, despesas e caixa" (`drawFx`): colunas sólidas lado a lado. Recebível (`--fx-rec`, azul) e despesa (`--fx-desp`, vinho) do período ficam no eixo da esquerda. O caixa acumulado (`--fx-cx`, verde; `--fx-neg`, vermelho quando negativo) fica no eixo da direita, junto com as linhas acumuladas, e os zeros dos dois eixos são alinhados. Há rótulos de valor quando há espaço. As linhas seguem o padrão do comparativo mensal: curva, área preenchida até o zero e pontos.
 - Card e tabela "Próximos 12 meses": contam 12 meses a partir do início dos recebimentos (premissa `S.recIni`), ou a partir do mês atual se esse início já passou.
-- Os indicadores ficam todos em uma linha (cartões compactos) a partir de 1300px de largura; abaixo disso, quebram em várias linhas.
+- Os indicadores ficam todos em uma linha (cartões compactos) a partir de 1300px de largura; abaixo disso, quebram em várias linhas. A Visão geral usa o mesmo padrão (6 cartões), mas lá o rodapé e as etiquetas quebram linha em vez de serem cortados.
 - Os planos fixos ficam em `PLANOS`, com percentuais sobre o valor da venda: apartamento À vista, 12x, 36x e 60x; loja À vista e 36x. Vendas com plano "Específico" usam as parcelas da aba **Fluxos específicos**.
 - As premissas (início dos recebimentos, despesas de obra, datas de entrega) são editáveis na tela e salvas no `localStorage` (`painel-config`) e no banco compartilhado.
 
@@ -102,5 +102,5 @@ git push
 O GitHub Pages republica em cerca de 1 minuto. Identidade do git neste computador: Filipe Andrade · filipeaxavier@hotmail.com.
 
 ## Pendências conhecidas
-- O aviso "Aba Cadastro de Unidades não foi usada (colunas não reconhecidas ou aba repetida)" aparece ao abrir o painel. Ainda não foi investigado.
+- O aviso "Aba Cadastro de Unidades não foi usada" aparece se a planilha de vendas tiver uma aba de cadastro fora do formato (ex.: coluna "Descrição" em vez de "Unidade"). Mantenha o cadastro só no arquivo `Cadastro de Unidades.xlsx`.
 - No comparativo mensal, as duas áreas são tons de azul e, onde se sobrepõem, o ano anterior fica pouco visível.
