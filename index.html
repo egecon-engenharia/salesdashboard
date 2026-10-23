@@ -295,8 +295,8 @@ body{background:
 .card:not(.kpi) > .head > .icon-btn,.card:not(.kpi) > .head > .tools{position:absolute;right:0;top:0}
 .card:not(.kpi) > .head:has(.tools) > div:first-child{padding-right:180px;padding-left:180px}
 .insights li{border-left-color:var(--navy)}
-/* Corretores e clientes: valores alinhados à esquerda */
-#pg-pessoas th.n,#pg-pessoas td.n{text-align:left}
+/* Visão geral (vendas, estoque) e Corretores e clientes: valores alinhados à esquerda */
+:is(#pg-geral,#pg-pessoas) :is(th,td).n{text-align:left}
 /* Fluxo de caixa: cores do gráfico (recebível azul, despesa vinho, caixa verde, negativo vermelho) */
 :root{--fx-rec:#3E6FC9;--fx-desp:#8B1A1A;--fx-cx:#5E9E3A;--fx-neg:#E01E1E}
 :root[data-theme="dark"]{--fx-rec:#6D97E8;--fx-desp:#C24A4A;--fx-cx:#7DBF57;--fx-neg:#FF5252}

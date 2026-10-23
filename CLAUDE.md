@@ -69,7 +69,7 @@ Painel web de vendas imobiliárias (vendas, estoque, corretores, clientes e flux
   - indicadores (`.kpi`) em blocos azuis com ícone redondo à esquerda (SVG embutido via `--ico`, que se repete a cada 4 cartões);
   - quadros (`.card`) cinza-claro (`--panel: #EDEFF2`), com borda escura, sombra e título centralizado, dentro de um painel cinza arredondado (`--panel-back`);
   - comparativo mensal com área semitransparente abaixo de cada linha (em `drawLine`);
-  - tabelas da aba Corretores e clientes com valores alinhados à esquerda.
+  - tabelas da Visão geral (Estoque, Vendas) e da aba Corretores e clientes com valores alinhados à esquerda. As do Fluxo de caixa continuam à direita.
 
 ## Diretrizes de trabalho
 
